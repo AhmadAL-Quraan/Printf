@@ -56,15 +56,14 @@ void	ft_putchar(char c, int *cnt)
 ### Formats
 The different types of variables are printed using a function for each of the formats:
 
-* [__`ft_putchar_pf()`__](https://github.com/PublioElio/School-42-printf/blob/main/ft_putchar_pf.c) prints `char` type variables and is called by each of the following functions to print the character strings one by one. Also, it is where the pointer returned by the `ft_printf()` function is incremented.
-* [__`ft_puthex_pf()`__](https://github.com/PublioElio/School-42-printf/blob/main/ft_puthex_pf.c) prints hexadecimal integers,  using a string included in the `ft_printf.h` library. There is one string for uppercase and one for lowercase characters.
-* [__`ft_putnbr_pf()`__](https://github.com/PublioElio/School-42-printf/blob/main/ft_putnbr_pf.c) recursively prints an integer, handling the maximum negative value with a conditional (`if-else`) and casting the integer to characters.
-* [__`ft_putptr_pf()`__](https://github.com/PublioElio/School-42-printf/blob/main/ft_putptr_pf.c) prints a pointer, in hexadecimal format (lowercase), preceded by the string "0x".
-* [__`ft_putstr_pf()`__](https://github.com/PublioElio/School-42-printf/blob/main/ft_putstr_pf.c) prints a `char *` type variable, calling `ft_putchar_pf()` in a `while` loop. It the string is `NULL`, it returns `"(null)"`.
-* [__`ft_putuint_pf()`__](https://github.com/PublioElio/School-42-printf/blob/main/ft_putuint_pf.c) prints an `unsigned int` type variable.
+* `printf_utilization.c` prints `char` type variables and is called by each of the following functions to print the character strings one by one. Also, it is where the pointer returned by the `ft_printf()` function is incremented.
+* `printf_main.c` p
+* `ft_utostr.c` prints an `unsigned int` type variable. 
+* `ft_pointer.c` prints a pointer, in hexadecimal format (lowercase), preceded by the string "0x".
+* `ft_itoa.c` prints a `char *` type variable, calling `ft_putchar_pf()` in a `while` loop. It the string is `NULL`, it returns `"(null)"`.
+* `ft_hex.c`  prints hexadecimal integers,  using a string included in the `ft_printf.h` library. There is one string for uppercase and one for lowercase characters.
+* `ft_print_base.c` Printe the base of any value, by giving it the number and it's base.
 
-### Auxiliary functions
-[__`ft_aux_pf.c()`__](https://github.com/PublioElio/School-42-printf/blob/main/ft_aux_pf.c) this file contains all the auxiliary functions, specifically the `ft_atoi_base` function, [made during the August pool](https://github.com/PublioElio/School42-Piscina-agosto-2022). This function will be used mainly to change the base in functions that handle hexadecimal numbers and `unsigned int` type variables.
 
 ## Requirements
 The functions are written in __C language__ and need the `gcc` compiler, with `<stdlib.h>`, `<stdarg.h>` and `<unistd.h>` standard libraries to run.
