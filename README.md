@@ -47,10 +47,10 @@ To deal with the variable number of parameters entered, the macros `va_list`, `v
 To handle the integer returned by `ft_printf()`, a pointer is given in the format printing functions. In this way, the function handles the number of characters printed before continuing with the string sent by parameter. Example:
 
 ```
-void	ft_putchar_pf(char c, size_t *counter)
+void	ft_putchar(char c, int *cnt)
 {
 	write(1, &c, 1);
-	(*counter)++; // increasing the pointer with each character printed
+	(*cnt)++; // increasing the pointer with each character printed
 }
 ```
 ### Formats
@@ -93,6 +93,4 @@ To use this project in your code, simply include this header:
 #include "ft_printf.h"
 ```
 
-## Testing
-This function have been tested with [Francinette](https://github.com/xicodomingues/francinette).
 
