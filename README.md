@@ -93,7 +93,7 @@ To use this project in your code, simply include this header:
 ```
 
 
-### 4. Run the main.c file using the library made in make file.
+### 4. Run the main.c file using the libftprintf.a library.
 ```C
 cc main.c libftprintf.a -o object_File && ./object_File
 ```
