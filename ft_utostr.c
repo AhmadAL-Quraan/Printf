@@ -6,16 +6,15 @@
 /*   By: aqoraan <aqoraan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 09:40:06 by aqoraan           #+#    #+#             */
-/*   Updated: 2026/01/19 10:45:33 by aqoraan          ###   ########.fr       */
+/*   Updated: 2026/01/24 20:44:36 by aqoraan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_utostr(int num)
-{
-	unsigned int	conv;
+void ft_utostr(int num, int *cnt) {
+  unsigned int conv;
 
-	conv = (unsigned int)num;
-	return (ft_print_base(conv, "0123456789"));
+  conv = (unsigned int)num;
+  ft_print_base(conv, "0123456789", cnt);
 }

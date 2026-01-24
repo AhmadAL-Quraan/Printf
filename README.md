@@ -2,3 +2,4 @@
 * Check tester.
 * Makefile 
 * Learn how to make .a lib and test.
+* README

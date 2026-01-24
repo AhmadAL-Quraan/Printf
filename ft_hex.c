@@ -6,18 +6,16 @@
 /*   By: aqoraan <aqoraan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 10:27:36 by aqoraan           #+#    #+#             */
-/*   Updated: 2026/01/19 10:35:15 by aqoraan          ###   ########.fr       */
+/*   Updated: 2026/01/24 20:45:57 by aqoraan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_turn_hex_lower(unsigned int num)
-{
-	return (ft_print_base(num, "0123456789abcdef"));
+void ft_turn_hex_lower(unsigned int num, int *cnt) {
+  ft_print_base(num, "0123456789abcdef", cnt);
 }
 
-int	ft_turn_hex_upper(unsigned int num)
-{
-	return (ft_print_base(num, "0123456789ABCDEF"));
+void ft_turn_hex_upper(unsigned int num, int *cnt) {
+  ft_print_base(num, "0123456789ABCDEF", cnt);
 }

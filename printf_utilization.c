@@ -6,7 +6,7 @@
 /*   By: aqoraan <aqoraan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 21:23:32 by aqoraan           #+#    #+#             */
-/*   Updated: 2026/01/19 11:11:25 by aqoraan          ###   ########.fr       */
+/*   Updated: 2026/01/24 20:49:31 by aqoraan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,22 +39,22 @@ char *ft_strchr(const char *s, int c) {
   return (NULL);
 }
 
-int ft_put_string(char *str, cnt) {
+void ft_put_string(char *str, int *cnt) {
   int idx;
 
   if (!str) {
     write(1, "(null)", 6);
-    return (6);
+    (*cnt) += 6;
+    return;
   }
   idx = 0;
   while (str[idx]) {
     ft_putchar(str[idx], cnt);
     idx += 1;
   }
-  return (idx);
 }
 
-void ft_putchar(char c, size_t cnt) {
-  cnt += 1;
+void ft_putchar(char c, int *cnt) {
+  (*cnt) += 1;
   write(1, &c, 1);
 }
