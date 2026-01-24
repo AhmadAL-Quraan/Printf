@@ -4,7 +4,7 @@ the 42 curriculum by* aqoraan.
 
 <h1 align="center">School 42 printf()</h1>
 
-This repository contains all files for the __printf__ project from School 42 Málaga cursus. The project consist in duplicate the [`printf()`](https://es.wikipedia.org/wiki/Printf) function, part of the `stdio.h` library.
+This repository contains all files for the __printf__ project from 42 Irbid. The project consist in duplicate the [`printf()`](https://es.wikipedia.org/wiki/Printf) function, part of the `stdio.h` library.
 
 <h2 align="center">
 	<a href="#about">About</a>
