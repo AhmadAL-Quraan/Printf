@@ -48,6 +48,24 @@ static void	swap(int len, char *str)
 	}
 }
 
+char	*expand(int *idx, int len)
+{
+	char	*str;
+
+	if (len == 0)
+	{
+		str = malloc(2);
+		if (!str)
+			return (NULL);
+		str[(*idx)++] = '0';
+	}
+	else
+		str = malloc(len + 1);
+	if (!str)
+		return (NULL);
+	return (str);
+}
+
 void	ft_print_base(unsigned long num, char *base, int *cnt)
 {
 	int		len;
@@ -57,16 +75,15 @@ void	ft_print_base(unsigned long num, char *base, int *cnt)
 
 	base_len = ft_strlen(base);
 	len = int_len(num, base);
-	str = malloc(len);
-	if (!str)
-		return ;
 	idx = 0;
+	str = expand(&idx, len);
 	while (num > 0)
 	{
 		str[idx] = base[num % base_len];
 		num /= base_len;
 		idx += 1;
 	}
+	str[idx] = '\0';
 	swap(len, str);
 	ft_put_string(str, cnt);
 	free(str);
