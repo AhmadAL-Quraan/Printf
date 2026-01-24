@@ -6,7 +6,7 @@
 /*   By: aqoraan <aqoraan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 07:29:30 by aqoraan           #+#    #+#             */
-/*   Updated: 2026/01/24 21:02:06 by aqoraan          ###   ########.fr       */
+/*   Updated: 2026/01/24 21:24:12 by aqoraan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,11 @@ static void turn_to_string(long long new_num, int last, int *idx, char *ptr) {
   }
 }
 
+void contin(char *ptr, int *cnt) {
+  ft_put_string(ptr, cnt);
+  free(ptr);
+}
+
 void ft_itoa(int n, int *cnt) {
   long long new_num;
   int negative;
@@ -58,6 +63,5 @@ void ft_itoa(int n, int *cnt) {
   turn_to_string(new_num, last, &idx, ptr);
   if (negative)
     ptr[idx] = '-';
-  ft_put_string(ptr, cnt);
-  free(ptr);
+  contin(ptr, cnt);
 }
