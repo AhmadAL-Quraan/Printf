@@ -12,20 +12,15 @@ This project consists in duplicate the behavior of the C function `printf()`. It
 
 You will find more details in the [subject of the project](https://github.com/PublioElio/School-42-printf/blob/main/printf.es.subject.pdf).
 
-## Index
-- [Structure](#structure)
-- [Formats](#formats)
-	- [va_list](#va_list)
-	- [Returning an integer](#returning-an-integer)
-- [Auxiliary functions](#auxiliary-functions)
 
-### Structure
+
+## Structure
 The main obstacles during the execution of the project have been: handling a variable number of parameters and the function `ft_printf()` returning an `int`.
 
-#### `va_list`
+### `va_list`
 To deal with the variable number of parameters entered, the macros `va_list`, `va_start`, `va_arg` and `va_end` have been used. The `ft_printf()` function calls the `ft_fotmat()` function when it finds the `%` sign among the entered parameters, then it checks the next character in the string to call one of the functions that print the different variable types. To use this macro, the libraryt `<stdarg.h>` is included in the `ft_printf.h`.
 
-#### Returning an integer
+### Returning an integer
 To handle the integer returned by `ft_printf()`, a pointer is given in the format printing functions. In this way, the function handles the number of characters printed before continuing with the string sent by parameter. Example:
 
 ```
@@ -35,7 +30,7 @@ void	ft_putchar(char c, int *cnt)
 	(*cnt)++; // increasing the pointer with each character printed
 }
 ```
-### Formats
+## Formats
 The different types of variables are printed using a function for each of the formats:
 
 * `printf_utilization.c` prints `char` type variables and is called by each of the following functions to print the character strings one by one. Also, it is where the pointer returned by the `ft_printf()` function is incremented.
@@ -50,9 +45,9 @@ The different types of variables are printed using a function for each of the fo
 ## Requirements
 The functions are written in __C language__ and need the `gcc` compiler, with `<stdlib.h>`, `<stdarg.h>` and `<unistd.h>` standard libraries to run.
 
-## Instructions
+# Instructions
 
-### 1. Compiling the archives
+## 1. Compiling the archives
 
 To compile the proiect, go to its path and run:
 
@@ -60,14 +55,14 @@ For __mandatory__ functions:
 ```
 $ make
 ```
-### 2. Cleaning all binary (.o) and executable files (.a)
+## 2. Cleaning all binary (.o) and executable files (.a)
 
 To delete all files generated with make, go to the path and run:
 ```
 $ make fclean
 ```
 
-### 3. Using it in your code
+## 3. Using it in your code
 
 To use this project in your code, simply include this header:
 ```
@@ -75,7 +70,7 @@ To use this project in your code, simply include this header:
 ```
 
 
-### 4. Run the main.c file using the libftprintf.a library.
+## 4. Run the main.c file using the libftprintf.a library.
 ```C
 cc main.c libftprintf.a -o object_File && ./object_File
 ```
