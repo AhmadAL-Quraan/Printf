@@ -1,22 +1,4 @@
 
-*This activity has been created as part of
-the 42 curriculum by* aqoraan.
-
-<h1 align="center">School 42 printf()</h1>
-
-This repository contains all files for the __printf__ project from 42 Irbid. The project consist in duplicate the [`printf()`](https://es.wikipedia.org/wiki/Printf) function, part of the `stdio.h` library.
-
-<h2 align="center">
-	<a href="#about">About</a>
-	<span> · </span>
-	<a href="#index">Index</a>
-	<span> · </span>
-	<a href="#requirements">Requirements</a>
-	<span> · </span>
-	<a href="#instructions">Instructions</a>
-	<span> · </span>
-	<a href="#testing">Testing</a>
-</h2>
 
 ## About
 This project consists in duplicate the behavior of the C function `printf()`. It is not necessary to implement the buffer management of the original function. It must handle the following parameters:
