@@ -22,8 +22,5 @@ typedef __builtin_va_list va_list;
 #define va_arg(ap, type)   __builtin_va_arg(ap, type)
 #define va_end(ap)         __builtin_va_end(ap)
 
-
->[!note] when using va_arg to read data from va_list, it will read garbage data after the last valid value that you give, so if you put NULL, it will read the right amount and stop there, see `cnt_variadic_arg.c` function, which implements a function that can count the number of variadic parameters that has been gived to .
-
-
 ```
+>[!note] when using va_arg to read data from va_list, it will read garbage data after the last valid value that you give, so if you put NULL, it will read the right amount and stop there, see `cnt_variadic_arg.c` function, which implements a function that can count the number of variadic parameters that has been gived to .
