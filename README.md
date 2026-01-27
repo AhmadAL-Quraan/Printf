@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-=======
-*This activity has been created as part of
-the 42 curriculum by* aqoraan.
-
-
->>>>>>> 3d04524 (Edit make file and doc)
-
 ## About
 This project consists in duplicate the behavior of the C function `printf()`. It is not necessary to implement the buffer management of the original function. It must handle the following parameters:
 
