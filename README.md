@@ -9,7 +9,7 @@ This project consists in duplicate the behavior of the C function `printf()`. It
 - hexadecimal `int` type variables (uppercase and lowercase).
 - `pointer` type variables.
 
-You will find more details in the [subject of the project](https://github.com/PublioElio/School-42-printf/blob/main/printf.es.subject.pdf).
+
 
 
 
